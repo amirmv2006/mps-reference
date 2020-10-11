@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/code/buildscripts/solutions/ir.amv.snippets.cats.ide.build/ir.amv.snippets.cats.ide.build.msd" folder="buildscripts" />
+      <modulePath path="$PROJECT_DIR$/code/cats/languages/ir.amv.os.snippets.catslang/ir.amv.os.snippets.catslang.mpl" folder="langs" />
+    </projectModules>
+  </component>
+</project>
