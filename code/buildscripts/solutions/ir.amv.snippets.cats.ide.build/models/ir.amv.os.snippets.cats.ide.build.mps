@@ -324,7 +324,7 @@
         </node>
         <node concept="1yeLz9" id="1LFOa1ykmNI" role="1TViLv">
           <property role="TrG5h" value="ir.amv.os.snippets.catslang#01" />
-          <property role="3LESm3" value="a219849b-553a-4827-a744-61b0bc657995" />
+          <property role="3LESm3" value="30537b44-53e9-456d-9009-f816c0eb37fb" />
           <node concept="1BupzO" id="1LFOa1ykmNQ" role="3bR31x">
             <property role="3ZfqAx" value="generator/templates" />
             <property role="1Hdu6h" value="true" />
