@@ -12,7 +12,7 @@
   </facets>
   <accessoryModels />
   <generators>
-    <generator alias="main" namespace="ir.amv.os.snippets.catslang.generator" uuid="1d7345f1-3736-4e2b-b8f3-fa2c25f96918">
+    <generator alias="main" namespace="ir.amv.os.snippets.catslang#generator" uuid="1d7345f1-3736-4e2b-b8f3-fa2c25f96918">
       <models>
         <modelRoot contentPath="${module}/generator" type="default">
           <sourceRoot location="templates" />
@@ -48,7 +48,7 @@
         <module reference="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" version="0" />
         <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
         <module reference="9ecd1ff2-cb61-49b7-add4-5ffd470c9842(ir.amv.os.snippets.catslang)" version="0" />
-        <module reference="1d7345f1-3736-4e2b-b8f3-fa2c25f96918(ir.amv.os.snippets.catslang.generator)" version="0" />
+        <module reference="1d7345f1-3736-4e2b-b8f3-fa2c25f96918(ir.amv.os.snippets.catslang#generator)" version="0" />
         <module reference="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" version="0" />
         <module reference="9e98f4e2-decf-4e97-bf80-9109e8b759aa(jetbrains.mps.lang.feedback.context)" version="0" />
       </dependencyVersions>

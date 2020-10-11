@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:dca2a763-7685-4571-a32a-2b967ed092d5(ir.amv.os.snippets.catslang.generator.templates@generator)">
+<model ref="r:dca2a763-7685-4571-a32a-2b967ed092d5(ir.amv.os.snippets.catslang#generator.templates@generator)">
   <persistence version="9" />
   <languages>
     <devkit ref="a2eb3a43-fcc2-4200-80dc-c60110c4862d(jetbrains.mps.devkit.templates)" />
