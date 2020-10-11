@@ -1,0 +1,124 @@
+import de.itemis.mps.gradle.BuildLanguages
+import de.itemis.mps.gradle.RunAntScript
+
+
+ext.mpsMajor = "2019.3"
+ext.mpsMinor = "4"
+
+group 'ir.amv.snippets'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    repositories {
+        maven { url 'https://projects.itemis.de/nexus/content/repositories/mbeddr' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath "de.itemis.mps:mps-gradle-plugin:1.2+"
+        classpath 'de.undercouch:gradle-download-task:4.0.4'
+    }
+}
+
+apply plugin: 'de.undercouch.download'
+
+repositories {
+    maven { url 'https://projects.itemis.de/nexus/content/repositories/mbeddr' }
+    ivy {
+        url "https://download.jetbrains.com/mps/$mpsMajor/"
+        layout 'pattern', {
+            artifact "[module]-[revision].[ext]"
+        }
+        metadataSources { // skip downloading ivy.xml
+            artifact()
+        }
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+
+configurations {
+    mps
+    ant_lib
+}
+
+dependencies {
+    mps "com.jetbrains:MPS:$mpsMajor.$mpsMinor@zip"
+    ant_lib "org.apache.ant:ant-junit:1.10.1"
+}
+
+task downloadJBRZip(type: Download) {
+    src "https://jetbrains.bintray.com/intellij-jbr/jbrsdk-11_0_6-osx-x64-b520.43.tar.gz"
+    dest file('lib/jbr.tar.gz')
+    overwrite false
+}
+
+task downloadJBR(type: Copy, dependsOn: downloadJBRZip) {
+    from tarTree('lib/jbr.tar.gz')
+    into file('lib/jbr')
+}
+
+task downloadDependencies(type: Copy) {
+    dependsOn configurations.mps
+
+    configurations.mps.files.each {
+        from zipTree(it)
+    }
+    into 'lib'
+}
+
+ext["itemis.mps.gradle.ant.defaultScriptClasspath"] = configurations.ant_lib.fileCollection { true }
+ext["itemis.mps.gradle.ant.defaultScriptArgs"] = ["-Dbasedir=."]
+
+task prepare()
+
+task buildBootstrap(type: BuildLanguages, dependsOn: prepare) {
+    script 'build-bootstrap.xml'
+}
+
+task generate(type: RunAntScript, dependsOn: buildBootstrap) {
+    script 'build/build-plugin.xml'
+    targets 'generate'
+}
+
+task buildPlugin(type: BuildLanguages, dependsOn: buildBootstrap) {
+    script 'build/build-plugin.xml'
+}
+
+task $buildRcp(type: BuildLanguages, dependsOn: buildPlugin) {
+    script 'build/build-rcp.xml'
+}
+
+task copyStartupScripts(type: Copy, dependsOn: buildBootstrap) {
+    from 'code/buildscripts/solutions/org.fbme.ide.build/source_gen/org/fbme/ide/build'
+
+    include '*.bat'
+    include '*.sh'
+    include '*.vmoptions'
+    include 'Info.plist.xml'
+
+    into 'build/startup'
+}
+
+task buildRcp(type: RunAntScript, dependsOn: [$buildRcp, copyStartupScripts]) {
+    script 'build/build-rcpdistrib.xml'
+    targets 'clean', 'build'
+}
+
+task buildRcpWithJBR(type: RunAntScript, dependsOn: [$buildRcp, copyStartupScripts, downloadJBR]) {
+    script 'build/build-rcpdistrib-jbr.xml'
+    targets 'clean', 'build'
+}
+
+task clean(type: Delete, dependsOn: ':code:library:clean') {
+    delete 'build'
+    delete 'lib'
+    delete fileTree('.').matching {
+        include '**/source_gen/**'
+        include '**/source_gen.caches/**'
+        include '**/classes_gen/**'
+    }
+}
