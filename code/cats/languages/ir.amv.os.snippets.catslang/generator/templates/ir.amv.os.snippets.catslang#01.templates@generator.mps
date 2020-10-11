@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:9de3fd5c-aab4-4255-9336-2187f1d043d8(ir.amv.os.snippets.catslang.generator00.templates@generator)">
+<model ref="r:df4c1411-2d1c-419a-9929-4638133d93f5(ir.amv.os.snippets.catslang#01.templates@generator)">
   <persistence version="9" />
   <languages>
     <devkit ref="a2eb3a43-fcc2-4200-80dc-c60110c4862d(jetbrains.mps.devkit.templates)" />
@@ -17,7 +17,7 @@
       </concept>
     </language>
   </registry>
-  <node concept="bUwia" id="62CzOEt1Qok">
+  <node concept="bUwia" id="62CzOEt1QUN">
     <property role="TrG5h" value="main" />
   </node>
 </model>
