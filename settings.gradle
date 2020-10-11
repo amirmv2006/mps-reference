@@ -1,3 +1,4 @@
 rootProject.name = 'mps-reference'
 
+include 'code:buildscripts'
 include "code:cats"
