@@ -2,7 +2,7 @@
 <project version="4">
   <component name="MPSProject">
     <projectModules>
-      <modulePath path="$PROJECT_DIR$/code/cats/languages/ir.amv.os.snippets.catslang/ir.amv.os.snippets.catslang.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/code/cats/languages/ir.amv.os.snippets.catslang/ir.amv.os.snippets.catslang.mpl" folder="langs" />
     </projectModules>
   </component>
 </project>
