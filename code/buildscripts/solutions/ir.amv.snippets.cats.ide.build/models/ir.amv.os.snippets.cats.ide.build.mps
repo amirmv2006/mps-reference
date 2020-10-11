@@ -166,7 +166,7 @@
         <node concept="2Ry0Ak" id="1LFOa1yjunR" role="iGT6I">
           <property role="2Ry0Am" value="lib" />
           <node concept="2Ry0Ak" id="1LFOa1yjunW" role="2Ry0An">
-            <property role="2Ry0Am" value="MPS 2019.3" />
+            <property role="2Ry0Am" value="MPS 2020.2" />
           </node>
         </node>
       </node>
@@ -246,7 +246,7 @@
       <node concept="aVJcg" id="1LFOa1yjA_u" role="aVJcv">
         <node concept="NbPM2" id="1LFOa1yjA_t" role="aVJcq">
           <node concept="3Mxwew" id="1LFOa1yjA_s" role="3MwsjC">
-            <property role="3MwjfP" value="CATS-193.SNAPSHOT" />
+            <property role="3MwjfP" value="CATS-202.SNAPSHOT" />
           </node>
         </node>
       </node>
@@ -266,8 +266,8 @@
       <node concept="55IIr" id="1LFOa1yjAAi" role="398pKh">
         <node concept="2Ry0Ak" id="1LFOa1yjAAl" role="iGT6I">
           <property role="2Ry0Am" value="lib" />
-          <node concept="2Ry0Ak" id="1LFOa1yjAAq" role="2Ry0An">
-            <property role="2Ry0Am" value="MPS 2019.3" />
+          <node concept="2Ry0Ak" id="62CzOEt12oU" role="2Ry0An">
+            <property role="2Ry0Am" value="MPS 2020.2" />
           </node>
         </node>
       </node>
@@ -323,7 +323,7 @@
           </node>
         </node>
         <node concept="1yeLz9" id="1LFOa1ykmNI" role="1TViLv">
-          <property role="TrG5h" value="ir.amv.os.snippets.catslang#generator" />
+          <property role="TrG5h" value="ir.amv.os.snippets.catslang#01" />
           <property role="3LESm3" value="1d7345f1-3736-4e2b-b8f3-fa2c25f96918" />
           <node concept="1BupzO" id="1LFOa1ykmNQ" role="3bR31x">
             <property role="3ZfqAx" value="generator/templates" />

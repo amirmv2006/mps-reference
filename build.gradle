@@ -2,8 +2,8 @@ import de.itemis.mps.gradle.BuildLanguages
 import de.itemis.mps.gradle.RunAntScript
 
 
-ext.mpsMajor = "2019.3"
-ext.mpsMinor = "4"
+ext.mpsMajor = "2020.2"
+ext.mpsMinor = "2"
 
 group 'ir.amv.snippets'
 version '1.0-SNAPSHOT'
@@ -73,19 +73,19 @@ task downloadDependencies(type: Copy) {
 ext["itemis.mps.gradle.ant.defaultScriptClasspath"] = configurations.ant_lib.fileCollection { true }
 ext["itemis.mps.gradle.ant.defaultScriptArgs"] = ["-Dbasedir=."]
 
-task prepare()
+task prepare(dependsOn: [downloadDependencies])
 
 task buildBootstrap(type: BuildLanguages, dependsOn: prepare) {
     script 'build-bootstrap.xml'
 }
 
 task generate(type: RunAntScript, dependsOn: buildBootstrap) {
-    script 'build-plugin.xml'
+    script 'build/build-plugin.xml'
     targets 'generate'
 }
 
 task buildPlugin(type: BuildLanguages, dependsOn: buildBootstrap) {
-    script 'build-plugin.xml'
+    script 'build/build-plugin.xml'
 }
 
 //task $buildRcp(type: BuildLanguages, dependsOn: buildPlugin) {
@@ -113,7 +113,7 @@ task copyStartupScripts(type: Copy, dependsOn: buildBootstrap) {
 //    targets 'clean', 'build'
 //}
 
-task clean(type: Delete, dependsOn: ':code:library:clean') {
+task clean(type: Delete) {
     delete 'build'
     delete 'lib'
     delete fileTree('.').matching {

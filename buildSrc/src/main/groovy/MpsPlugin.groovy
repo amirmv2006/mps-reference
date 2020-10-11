@@ -19,7 +19,7 @@ class MpsPlugin implements Plugin<Project> {
             }
         }
         project.dependencies {
-            compile project.fileTree('../../lib/MPS 2019.3/') {
+            compile project.fileTree('../../lib/MPS 2020.2/') {
                 include '**/*.jar'
                 exclude '**/*-src.jar'
             }
