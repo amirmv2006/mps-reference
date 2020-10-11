@@ -80,12 +80,12 @@ task buildBootstrap(type: BuildLanguages, dependsOn: prepare) {
 }
 
 task generate(type: RunAntScript, dependsOn: buildBootstrap) {
-    script 'build/build-plugin.xml'
+    script 'build-plugin.xml'
     targets 'generate'
 }
 
 task buildPlugin(type: BuildLanguages, dependsOn: buildBootstrap) {
-    script 'build/build-plugin.xml'
+    script 'build-plugin.xml'
 }
 
 //task $buildRcp(type: BuildLanguages, dependsOn: buildPlugin) {
