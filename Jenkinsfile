@@ -16,7 +16,7 @@ pipeline {
         }
       } // steps
     } // stage
-    stage('Gradle Generate') {
+    stage('Gradle Build Plugin') {
       agent { label 'master' }
       steps {
         withDockerContainer(
