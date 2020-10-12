@@ -26,7 +26,7 @@ pipeline {
         ) {
           script {
             sh "gradle buildPlugin --no-daemon "
-            archiveArtifacts "**/build/*.jar"
+            archiveArtifacts "build/**/*.zip, build/**/*.jar"
           } // script
         }
       } // steps
