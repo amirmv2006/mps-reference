@@ -80,6 +80,8 @@
       <concept id="6592112598314498932" name="jetbrains.mps.build.mps.structure.BuildMps_IdeaPlugin" flags="ng" index="m$_wf">
         <property id="6592112598314498927" name="id" index="m$_wk" />
         <child id="6592112598314498931" name="version" index="m$_w8" />
+        <child id="6592112598314499050" name="content" index="m$_yh" />
+        <child id="6592112598314499028" name="dependencies" index="m$_yJ" />
         <child id="6592112598314499021" name="name" index="m$_yQ" />
         <child id="6592112598314855574" name="containerName" index="m_cZH" />
       </concept>
@@ -87,7 +89,16 @@
         <reference id="6592112598314801433" name="plugin" index="m_rDy" />
         <child id="3570488090019868128" name="packagingType" index="pUk7w" />
       </concept>
+      <concept id="6592112598314499036" name="jetbrains.mps.build.mps.structure.BuildMps_IdeaPluginModule" flags="ng" index="m$_yB">
+        <reference id="6592112598314499037" name="target" index="m$_yA" />
+      </concept>
+      <concept id="6592112598314499027" name="jetbrains.mps.build.mps.structure.BuildMps_IdeaPluginDependency" flags="ng" index="m$_yC">
+        <reference id="6592112598314499066" name="target" index="m$_y1" />
+      </concept>
       <concept id="3570488090019868065" name="jetbrains.mps.build.mps.structure.BuildMpsLayout_AutoPluginLayoutType" flags="ng" index="pUk6x" />
+      <concept id="1500819558095907805" name="jetbrains.mps.build.mps.structure.BuildMps_Group" flags="ng" index="2G$12M">
+        <child id="1500819558095907806" name="modules" index="2G$12L" />
+      </concept>
       <concept id="868032131020265945" name="jetbrains.mps.build.mps.structure.BuildMPSPlugin" flags="ng" index="3b7kt6" />
       <concept id="5253498789149381388" name="jetbrains.mps.build.mps.structure.BuildMps_Module" flags="ng" index="3bQrTs">
         <child id="5253498789149547825" name="sources" index="3bR31x" />
@@ -96,6 +107,7 @@
       <concept id="5253498789149585690" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleDependencyOnModule" flags="ng" index="3bR9La">
         <reference id="5253498789149547705" name="module" index="3bR37D" />
       </concept>
+      <concept id="5507251971038816436" name="jetbrains.mps.build.mps.structure.BuildMps_Generator" flags="ng" index="1yeLz9" />
       <concept id="4278635856200817744" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleModelRoot" flags="ng" index="1BupzO">
         <property id="8137134783396907368" name="convert2binary" index="1Hdu6h" />
         <property id="8137134783396676838" name="extracted" index="1HemKv" />
@@ -103,6 +115,9 @@
         <child id="8137134783396676835" name="location" index="1HemKq" />
       </concept>
       <concept id="3189788309731840247" name="jetbrains.mps.build.mps.structure.BuildMps_Solution" flags="ng" index="1E1JtA" />
+      <concept id="3189788309731840248" name="jetbrains.mps.build.mps.structure.BuildMps_Language" flags="ng" index="1E1JtD">
+        <child id="9200313594498201639" name="generator" index="1TViLv" />
+      </concept>
       <concept id="322010710375871467" name="jetbrains.mps.build.mps.structure.BuildMps_AbstractModule" flags="ng" index="3LEN3z">
         <property id="8369506495128725901" name="compact" index="BnDLt" />
         <property id="322010710375892619" name="uuid" index="3LESm3" />
@@ -311,6 +326,98 @@
       <node concept="3_J27D" id="3PswS$xWhcT" role="m$_w8">
         <node concept="3Mxwew" id="3PswS$xWhdv" role="3MwsjC">
           <property role="3MwjfP" value="1.0" />
+        </node>
+      </node>
+      <node concept="m$_yB" id="3PswS$xWtY7" role="m$_yh">
+        <ref role="m$_yA" node="3PswS$xWtWg" resolve="ir.amv.os.snippets.catslang" />
+      </node>
+      <node concept="m$_yC" id="3PswS$xWtY9" role="m$_yJ">
+        <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
+      </node>
+    </node>
+    <node concept="2G$12M" id="3PswS$xWtW6" role="3989C9">
+      <property role="TrG5h" value="catslang-plugin" />
+      <node concept="1E1JtD" id="3PswS$xWtWg" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="ir.amv.os.snippets.catslang" />
+        <property role="3LESm3" value="9ecd1ff2-cb61-49b7-add4-5ffd470c9842" />
+        <node concept="55IIr" id="3PswS$xWtWh" role="3LF7KH">
+          <node concept="2Ry0Ak" id="3PswS$xWtWv" role="iGT6I">
+            <property role="2Ry0Am" value="code" />
+            <node concept="2Ry0Ak" id="3PswS$xWtW$" role="2Ry0An">
+              <property role="2Ry0Am" value="cats" />
+              <node concept="2Ry0Ak" id="3PswS$xWtWD" role="2Ry0An">
+                <property role="2Ry0Am" value="languages" />
+                <node concept="2Ry0Ak" id="3PswS$xWtWI" role="2Ry0An">
+                  <property role="2Ry0Am" value="ir.amv.os.snippets.catslang" />
+                  <node concept="2Ry0Ak" id="3PswS$xWtWN" role="2Ry0An">
+                    <property role="2Ry0Am" value="ir.amv.os.snippets.catslang.mpl" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1BupzO" id="3PswS$xWtWV" role="3bR31x">
+          <property role="3ZfqAx" value="models" />
+          <property role="1Hdu6h" value="true" />
+          <property role="1HemKv" value="true" />
+          <node concept="3LXTmp" id="3PswS$xWtWW" role="1HemKq">
+            <node concept="55IIr" id="3PswS$xWtWP" role="3LXTmr">
+              <node concept="2Ry0Ak" id="3PswS$xWtWQ" role="iGT6I">
+                <property role="2Ry0Am" value="code" />
+                <node concept="2Ry0Ak" id="3PswS$xWtWR" role="2Ry0An">
+                  <property role="2Ry0Am" value="cats" />
+                  <node concept="2Ry0Ak" id="3PswS$xWtWS" role="2Ry0An">
+                    <property role="2Ry0Am" value="languages" />
+                    <node concept="2Ry0Ak" id="3PswS$xWtWT" role="2Ry0An">
+                      <property role="2Ry0Am" value="ir.amv.os.snippets.catslang" />
+                      <node concept="2Ry0Ak" id="3PswS$xWtWU" role="2Ry0An">
+                        <property role="2Ry0Am" value="models" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="3PswS$xWtWX" role="3LXTna">
+              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+            </node>
+          </node>
+        </node>
+        <node concept="1yeLz9" id="3PswS$xWtWY" role="1TViLv">
+          <property role="TrG5h" value="ir.amv.os.snippets.catslang#01" />
+          <property role="3LESm3" value="30537b44-53e9-456d-9009-f816c0eb37fb" />
+          <node concept="1BupzO" id="3PswS$xWtX6" role="3bR31x">
+            <property role="3ZfqAx" value="generator/templates" />
+            <property role="1Hdu6h" value="true" />
+            <property role="1HemKv" value="true" />
+            <node concept="3LXTmp" id="3PswS$xWtX7" role="1HemKq">
+              <node concept="55IIr" id="3PswS$xWtWZ" role="3LXTmr">
+                <node concept="2Ry0Ak" id="3PswS$xWtX0" role="iGT6I">
+                  <property role="2Ry0Am" value="code" />
+                  <node concept="2Ry0Ak" id="3PswS$xWtX1" role="2Ry0An">
+                    <property role="2Ry0Am" value="cats" />
+                    <node concept="2Ry0Ak" id="3PswS$xWtX2" role="2Ry0An">
+                      <property role="2Ry0Am" value="languages" />
+                      <node concept="2Ry0Ak" id="3PswS$xWtX3" role="2Ry0An">
+                        <property role="2Ry0Am" value="ir.amv.os.snippets.catslang" />
+                        <node concept="2Ry0Ak" id="3PswS$xWtX4" role="2Ry0An">
+                          <property role="2Ry0Am" value="generator" />
+                          <node concept="2Ry0Ak" id="3PswS$xWtX5" role="2Ry0An">
+                            <property role="2Ry0Am" value="templates" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3qWCbU" id="3PswS$xWtX8" role="3LXTna">
+                <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+              </node>
+            </node>
+          </node>
         </node>
       </node>
     </node>
