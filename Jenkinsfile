@@ -6,7 +6,7 @@ pipeline {
       agent { label 'master' }
       steps {
         withDockerContainer(
-            image: 'gradle:6.6-jdk-11',
+            image: 'gradle:6.6-jdk11',
             args: '--net="host"',
             toolName: env.DOCKER_TOOL_NAME
         ) {
@@ -20,7 +20,7 @@ pipeline {
       agent { label 'master' }
       steps {
         withDockerContainer(
-            image: 'gradle:6.6-jdk-11',
+            image: 'gradle:6.6-jdk11',
             args: '--net="host"',
             toolName: env.DOCKER_TOOL_NAME
         ) {
