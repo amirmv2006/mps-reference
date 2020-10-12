@@ -11,7 +11,7 @@ pipeline {
             toolName: env.DOCKER_TOOL_NAME
         ) {
           script {
-            sh "gradle generate"
+            sh "gradle generate --no-daemon"
           } // script
         }
       } // steps
@@ -25,7 +25,7 @@ pipeline {
             toolName: env.DOCKER_TOOL_NAME
         ) {
           script {
-            sh "gradle buildPlugin"
+            sh "gradle buildPlugin --no-daemon "
             archiveArtifacts "**/build/*.jar"
           } // script
         }
