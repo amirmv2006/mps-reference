@@ -6,9 +6,9 @@
   <tstamp>
     <format property="date" pattern="yyyyMMdd" />
   </tstamp>
-  <property name="build.number" value="CATS-193.SNAPSHOT" />
+  <property name="build.number" value="CATS-202.SNAPSHOT" />
   <property name="ide-version" value="0.1" />
-  <property name="mps_home" location="${basedir}/lib/MPS 2019.3" />
+  <property name="mps_home" location="${basedir}/lib/MPS 2020.2" />
   <property name="artifacts.mps" location="${mps_home}" />
   <property name="artifacts.mpsStandalone" location="${mps_home}" />
   <property name="artifacts.mpsMakePlugin" location="${mps_home}/plugins" />
@@ -54,7 +54,7 @@
     <delete dir="${build.layout}" />
   </target>
   
-  <target name="compileJava" depends="java.compile.ir.amv.os.snippets.catslang, java.compile.ir.amv.os.snippets.catslang#generator" />
+  <target name="compileJava" depends="java.compile.ir.amv.os.snippets.catslang, java.compile.ir.amv.os.snippets.catslang#01" />
   
   <target name="processResources" />
   
@@ -94,6 +94,7 @@
       <library file="${artifacts.mps}/languages/devkits/jetbrains.mps.devkit.aspect.typesystem.jar" />
       <library file="${artifacts.mps}/languages/devkits/jetbrains.mps.devkit.general-purpose.jar" />
       <library file="${artifacts.mps}/languages/devkits/jetbrains.mps.devkit.language-descriptor.jar" />
+      <library file="${artifacts.mps}/languages/devkits/jetbrains.mps.devkit.templates.jar" />
       <library file="${artifacts.mps}/languages/editor/jetbrains.mps.editor.runtime.jar" />
       <library file="${artifacts.mps}/languages/editor/jetbrains.mps.editorlang.runtime.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.baseLanguage.lightweightdsl.jar" />
@@ -120,6 +121,7 @@
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.feedback.skeleton.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.findUsages.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.generator.generationContext.jar" />
+      <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.generator.generationParameters.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.generator.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.intentions.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.messages.jar" />
@@ -242,10 +244,10 @@
     </javac>
   </target>
   
-  <target name="java.compile.ir.amv.os.snippets.catslang#generator" depends="java.compile.ir.amv.os.snippets.catslang, fetchDependencies">
+  <target name="java.compile.ir.amv.os.snippets.catslang#01" depends="java.compile.ir.amv.os.snippets.catslang, fetchDependencies">
     <mkdir dir="${basedir}/code/cats/languages/ir.amv.os.snippets.catslang/generator/source_gen" />
-    <mkdir dir="${build.tmp}/java/out/ir.amv.os.snippets.catslang#generator" />
-    <javac destdir="${build.tmp}/java/out/ir.amv.os.snippets.catslang#generator" fork="true" encoding="utf8" includeantruntime="false" debug="true">
+    <mkdir dir="${build.tmp}/java/out/ir.amv.os.snippets.catslang#01" />
+    <javac destdir="${build.tmp}/java/out/ir.amv.os.snippets.catslang#01" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/code/cats/languages/ir.amv.os.snippets.catslang/generator/source_gen" />
@@ -285,6 +287,7 @@
         <fileset file="${artifacts.mps}/lib/jdom.jar" />
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/ecj-4.13.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
       </classpath>
     </javac>

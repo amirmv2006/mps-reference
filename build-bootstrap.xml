@@ -3,7 +3,7 @@
   <property name="build.dir" location="build" />
   <property name="build.tmp" location="${build.dir}/tmp/cats_Bootstrap" />
   <property name="build.layout" location="${build.dir}/artifacts/cats_Bootstrap" />
-  <property name="mps_home" location="${basedir}/lib/MPS 2019.3" />
+  <property name="mps_home" location="${basedir}/lib/MPS 2020.2" />
   <property name="artifacts.mps" location="${mps_home}" />
   <property file="${artifacts.mps}/build.properties" prefix="import.mps" />
   <property name="mps.build.number" value="${import.mps.mps.build.number}" />
