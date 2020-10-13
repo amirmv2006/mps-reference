@@ -50,16 +50,16 @@ dependencies {
     ant_lib "org.apache.ant:ant-junit:1.10.1"
 }
 
-//task downloadJBRZip(type: Download) {
-//    src "https://jetbrains.bintray.com/intellij-jbr/jbrsdk-11_0_6-osx-x64-b520.43.tar.gz"
-//    dest file('lib/jbr.tar.gz')
-//    overwrite false
-//}
-//
-//task downloadJBR(type: Copy, dependsOn: downloadJBRZip) {
-//    from tarTree('lib/jbr.tar.gz')
-//    into file('lib/jbr')
-//}
+task downloadJBRZip(type: Download) {
+    src "https://jetbrains.bintray.com/intellij-jbr/jbrsdk-11_0_6-osx-x64-b520.43.tar.gz"
+    dest file('lib/jbr.tar.gz')
+    overwrite false
+}
+
+task downloadJBR(type: Copy, dependsOn: downloadJBRZip) {
+    from tarTree('lib/jbr.tar.gz')
+    into file('lib/jbr')
+}
 
 task downloadDependencies(type: Copy) {
     dependsOn configurations.mps
@@ -112,10 +112,11 @@ task buildRcp(type: RunAntScript, dependsOn: [$buildRcp, copyStartupScripts]) {
     targets 'clean', 'build'
 }
 
-//task buildRcpWithJBR(type: RunAntScript, dependsOn: [$buildRcp, copyStartupScripts/*, downloadJBR*/]) {
+task buildRcpWithJBR(type: RunAntScript, dependsOn: [$buildRcp, copyStartupScripts/*, downloadJBR*/]) {
 //    script 'build/build-rcpdistrib-jbr.xml'
-//    targets 'clean', 'build'
-//}
+    script 'build-rcpdistrib-jbr.xml'
+    targets 'clean', 'build'
+}
 
 task clean(type: Delete) {
     delete 'build'
