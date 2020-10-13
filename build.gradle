@@ -90,9 +90,10 @@ task buildPlugin(type: BuildLanguages, dependsOn: buildBootstrap) {
     script 'build-plugin.xml'
 }
 
-//task $buildRcp(type: BuildLanguages, dependsOn: buildPlugin) {
+task $buildRcp(type: BuildLanguages, dependsOn: buildPlugin) {
 //    script 'build/build-rcp.xml'
-//}
+    script 'build-rcp.xml'
+}
 
 task copyStartupScripts(type: Copy, dependsOn: buildBootstrap) {
     from 'code/buildscripts/solutions/ir.amv.snippets.cats.ide.build/source_gen/ir/amv/snippets/cats/ide/build'
@@ -105,10 +106,11 @@ task copyStartupScripts(type: Copy, dependsOn: buildBootstrap) {
     into 'build/startup'
 }
 
-//task buildRcp(type: RunAntScript, dependsOn: [$buildRcp, copyStartupScripts]) {
+task buildRcp(type: RunAntScript, dependsOn: [$buildRcp, copyStartupScripts]) {
 //    script 'build/build-rcpdistrib.xml'
-//    targets 'clean', 'build'
-//}
+    script 'build-rcpdistrib.xml'
+    targets 'clean', 'build'
+}
 
 //task buildRcpWithJBR(type: RunAntScript, dependsOn: [$buildRcp, copyStartupScripts/*, downloadJBR*/]) {
 //    script 'build/build-rcpdistrib-jbr.xml'
