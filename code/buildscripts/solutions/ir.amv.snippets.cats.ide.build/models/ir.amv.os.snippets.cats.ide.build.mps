@@ -537,7 +537,7 @@
     </node>
   </node>
   <node concept="1l3spW" id="SSBTh98un7">
-    <property role="TrG5h" value="cats_RCM" />
+    <property role="TrG5h" value="cats_RCP" />
     <property role="2DA0ip" value="../../../.." />
     <property role="turDy" value="build-rcp.xml" />
     <node concept="10PD9b" id="SSBTh98un8" role="10PD9s" />
@@ -936,11 +936,11 @@
     </node>
   </node>
   <node concept="1l3spW" id="SSBTh98upq">
-    <property role="TrG5h" value="cats_RCMDistrib" />
+    <property role="TrG5h" value="cats_RCPDistrib" />
     <property role="turDy" value="build-rcpdistrib.xml" />
     <property role="2DA0ip" value="../../../.." />
     <node concept="2sgV4H" id="SSBTh98upr" role="1l3spa">
-      <ref role="1l3spb" node="SSBTh98un7" resolve="cats_RCM" />
+      <ref role="1l3spb" node="SSBTh98un7" resolve="cats_RCP" />
     </node>
     <node concept="1l3spV" id="SSBTh98ups" role="1l3spN">
       <node concept="1tmT9g" id="SSBTh98uqO" role="39821P">
