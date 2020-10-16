@@ -1776,7 +1776,7 @@
           <node concept="yKbIv" id="SSBTh99eq$" role="39821P">
             <node concept="2HvfSZ" id="SSBTh99eqB" role="39821P">
               <node concept="398BVA" id="SSBTh99eqF" role="2HvfZ0">
-                <ref role="398BVh" node="SSBTh99e8Z" resolve="jbr_home" />
+                <ref role="398BVh" node="1Y1nd8S4s$K" resolve="jbr_lnx_home" />
               </node>
             </node>
           </node>
@@ -1802,7 +1802,7 @@
                 <ref role="398BVh" node="SSBTh99e8H" resolve="mps_home" />
                 <node concept="2Ry0Ak" id="SSBTh99e4P" role="iGT6I">
                   <property role="2Ry0Am" value="bin" />
-                  <node concept="2Ry0Ak" id="SSBTh99e4Q" role="2Ry0An">
+                  <node concept="2Ry0Ak" id="1Y1nd8S4sA5" role="2Ry0An">
                     <property role="2Ry0Am" value="linux" />
                   </node>
                 </node>
@@ -1842,7 +1842,7 @@
                                     <property role="2Ry0Am" value="ide" />
                                     <node concept="2Ry0Ak" id="SSBTh99e56" role="2Ry0An">
                                       <property role="2Ry0Am" value="build" />
-                                      <node concept="2Ry0Ak" id="SSBTh99e57" role="2Ry0An">
+                                      <node concept="2Ry0Ak" id="1Y1nd8S4sA7" role="2Ry0An">
                                         <property role="2Ry0Am" value="mps-reference.vmoptions" />
                                       </node>
                                     </node>
@@ -1889,7 +1889,7 @@
                                     <property role="2Ry0Am" value="ide" />
                                     <node concept="2Ry0Ak" id="SSBTh99e5m" role="2Ry0An">
                                       <property role="2Ry0Am" value="build" />
-                                      <node concept="2Ry0Ak" id="SSBTh99e5n" role="2Ry0An">
+                                      <node concept="2Ry0Ak" id="1Y1nd8S4sA9" role="2Ry0An">
                                         <property role="2Ry0Am" value="mps-reference64.vmoptions" />
                                       </node>
                                     </node>
@@ -1940,7 +1940,7 @@
                                     <property role="2Ry0Am" value="ide" />
                                     <node concept="2Ry0Ak" id="SSBTh99e5B" role="2Ry0An">
                                       <property role="2Ry0Am" value="build" />
-                                      <node concept="2Ry0Ak" id="SSBTh99e5C" role="2Ry0An">
+                                      <node concept="2Ry0Ak" id="1Y1nd8S4sAb" role="2Ry0An">
                                         <property role="2Ry0Am" value="mps-reference.sh" />
                                       </node>
                                     </node>
@@ -1986,7 +1986,7 @@
           <node concept="yKbIv" id="SSBTh99eul" role="39821P">
             <node concept="2HvfSZ" id="SSBTh99eun" role="39821P">
               <node concept="398BVA" id="SSBTh99eur" role="2HvfZ0">
-                <ref role="398BVh" node="SSBTh99e8Z" resolve="jbr_home" />
+                <ref role="398BVh" node="1Y1nd8S4s_g" resolve="jbr_win_home" />
               </node>
             </node>
           </node>
@@ -2037,7 +2037,7 @@
                                     <property role="2Ry0Am" value="ide" />
                                     <node concept="2Ry0Ak" id="SSBTh99e65" role="2Ry0An">
                                       <property role="2Ry0Am" value="build" />
-                                      <node concept="2Ry0Ak" id="SSBTh99e66" role="2Ry0An">
+                                      <node concept="2Ry0Ak" id="1Y1nd8S4sAd" role="2Ry0An">
                                         <property role="2Ry0Am" value="mps-reference.vmoptions" />
                                       </node>
                                     </node>
@@ -2091,7 +2091,7 @@
                                     <property role="2Ry0Am" value="ide" />
                                     <node concept="2Ry0Ak" id="SSBTh99e6o" role="2Ry0An">
                                       <property role="2Ry0Am" value="build" />
-                                      <node concept="2Ry0Ak" id="SSBTh99e6p" role="2Ry0An">
+                                      <node concept="2Ry0Ak" id="1Y1nd8S4sAf" role="2Ry0An">
                                         <property role="2Ry0Am" value="mps-reference64.vmoptions" />
                                       </node>
                                     </node>
@@ -2122,7 +2122,7 @@
               <ref role="398BVh" node="SSBTh99e8H" resolve="mps_home" />
               <node concept="2Ry0Ak" id="SSBTh99e6v" role="iGT6I">
                 <property role="2Ry0Am" value="bin" />
-                <node concept="2Ry0Ak" id="SSBTh99e6w" role="2Ry0An">
+                <node concept="2Ry0Ak" id="1Y1nd8S4sAh" role="2Ry0An">
                   <property role="2Ry0Am" value="win" />
                 </node>
               </node>
@@ -2144,7 +2144,7 @@
                 <ref role="398BVh" node="SSBTh99e8H" resolve="mps_home" />
                 <node concept="2Ry0Ak" id="SSBTh99e6B" role="iGT6I">
                   <property role="2Ry0Am" value="bin" />
-                  <node concept="2Ry0Ak" id="SSBTh99e6C" role="2Ry0An">
+                  <node concept="2Ry0Ak" id="1Y1nd8S4sAj" role="2Ry0An">
                     <property role="2Ry0Am" value="win" />
                   </node>
                 </node>
@@ -2184,7 +2184,7 @@
                                     <property role="2Ry0Am" value="ide" />
                                     <node concept="2Ry0Ak" id="SSBTh99e6S" role="2Ry0An">
                                       <property role="2Ry0Am" value="build" />
-                                      <node concept="2Ry0Ak" id="SSBTh99e6T" role="2Ry0An">
+                                      <node concept="2Ry0Ak" id="1Y1nd8S4sAl" role="2Ry0An">
                                         <property role="2Ry0Am" value="mps-reference.bat" />
                                       </node>
                                     </node>
@@ -2262,7 +2262,7 @@
                         <property role="2Ry0Am" value="Contents" />
                         <node concept="2Ry0Ak" id="SSBTh99e7j" role="2Ry0An">
                           <property role="2Ry0Am" value="Resources" />
-                          <node concept="2Ry0Ak" id="SSBTh99e7k" role="2Ry0An">
+                          <node concept="2Ry0Ak" id="1Y1nd8S4sAn" role="2Ry0An">
                             <property role="2Ry0Am" value="mps.icns" />
                           </node>
                         </node>
@@ -2288,7 +2288,7 @@
                         <property role="2Ry0Am" value="Contents" />
                         <node concept="2Ry0Ak" id="SSBTh99e7s" role="2Ry0An">
                           <property role="2Ry0Am" value="MacOS" />
-                          <node concept="2Ry0Ak" id="SSBTh99e7t" role="2Ry0An">
+                          <node concept="2Ry0Ak" id="1Y1nd8S4sAp" role="2Ry0An">
                             <property role="2Ry0Am" value="mps" />
                           </node>
                         </node>
@@ -2340,7 +2340,7 @@
                                       <property role="2Ry0Am" value="ide" />
                                       <node concept="2Ry0Ak" id="SSBTh99e7L" role="2Ry0An">
                                         <property role="2Ry0Am" value="build" />
-                                        <node concept="2Ry0Ak" id="SSBTh99e7M" role="2Ry0An">
+                                        <node concept="2Ry0Ak" id="1Y1nd8S4sAr" role="2Ry0An">
                                           <property role="2Ry0Am" value="Info.plist.xml" />
                                         </node>
                                       </node>
@@ -2394,7 +2394,7 @@
               <node concept="yKbIv" id="SSBTh99eyh" role="39821P">
                 <node concept="2HvfSZ" id="SSBTh99eyj" role="39821P">
                   <node concept="398BVA" id="SSBTh99eyn" role="2HvfZ0">
-                    <ref role="398BVh" node="SSBTh99e8Z" resolve="jbr_home" />
+                    <ref role="398BVh" node="SSBTh99e8Z" resolve="jbr_mac_home" />
                   </node>
                 </node>
               </node>
@@ -2421,7 +2421,7 @@
                     <ref role="398BVh" node="SSBTh99e8H" resolve="mps_home" />
                     <node concept="2Ry0Ak" id="SSBTh99e86" role="iGT6I">
                       <property role="2Ry0Am" value="bin" />
-                      <node concept="2Ry0Ak" id="SSBTh99e87" role="2Ry0An">
+                      <node concept="2Ry0Ak" id="1Y1nd8S4sAt" role="2Ry0An">
                         <property role="2Ry0Am" value="mac" />
                       </node>
                     </node>
@@ -2445,7 +2445,7 @@
                     <ref role="398BVh" node="SSBTh99e8H" resolve="mps_home" />
                     <node concept="2Ry0Ak" id="SSBTh99e8e" role="iGT6I">
                       <property role="2Ry0Am" value="bin" />
-                      <node concept="2Ry0Ak" id="SSBTh99e8f" role="2Ry0An">
+                      <node concept="2Ry0Ak" id="1Y1nd8S4sAv" role="2Ry0An">
                         <property role="2Ry0Am" value="mac" />
                       </node>
                     </node>
@@ -2464,7 +2464,7 @@
                     <ref role="398BVh" node="SSBTh99e8H" resolve="mps_home" />
                     <node concept="2Ry0Ak" id="SSBTh99e8l" role="iGT6I">
                       <property role="2Ry0Am" value="bin" />
-                      <node concept="2Ry0Ak" id="SSBTh99e8m" role="2Ry0An">
+                      <node concept="2Ry0Ak" id="1Y1nd8S4sAx" role="2Ry0An">
                         <property role="2Ry0Am" value="mac" />
                       </node>
                     </node>
@@ -2504,7 +2504,7 @@
                                         <property role="2Ry0Am" value="ide" />
                                         <node concept="2Ry0Ak" id="SSBTh99e8A" role="2Ry0An">
                                           <property role="2Ry0Am" value="build" />
-                                          <node concept="2Ry0Ak" id="SSBTh99e8B" role="2Ry0An">
+                                          <node concept="2Ry0Ak" id="1Y1nd8S4sAz" role="2Ry0An">
                                             <property role="2Ry0Am" value="mps-reference64.vmoptions" />
                                           </node>
                                         </node>
@@ -2546,20 +2546,48 @@
       <node concept="55IIr" id="SSBTh99e8I" role="398pKh">
         <node concept="2Ry0Ak" id="SSBTh99e8J" role="iGT6I">
           <property role="2Ry0Am" value="lib" />
-          <node concept="2Ry0Ak" id="SSBTh99e8K" role="2Ry0An">
+          <node concept="2Ry0Ak" id="1Y1nd8S4sA_" role="2Ry0An">
             <property role="2Ry0Am" value="MPS 2020.2" />
           </node>
         </node>
       </node>
     </node>
     <node concept="398rNT" id="SSBTh99e8Z" role="1l3spd">
-      <property role="TrG5h" value="jbr_home" />
+      <property role="TrG5h" value="jbr_mac_home" />
       <node concept="55IIr" id="SSBTh99e9a" role="398pKh">
         <node concept="2Ry0Ak" id="SSBTh99e9d" role="iGT6I">
           <property role="2Ry0Am" value="lib" />
           <node concept="2Ry0Ak" id="SSBTh99e9i" role="2Ry0An">
-            <property role="2Ry0Am" value="jbr" />
+            <property role="2Ry0Am" value="jbr-mac" />
             <node concept="2Ry0Ak" id="SSBTh99e9n" role="2Ry0An">
+              <property role="2Ry0Am" value="jbrsdk" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="398rNT" id="1Y1nd8S4s$K" role="1l3spd">
+      <property role="TrG5h" value="jbr_lnx_home" />
+      <node concept="55IIr" id="1Y1nd8S4s_x" role="398pKh">
+        <node concept="2Ry0Ak" id="1Y1nd8S4s_$" role="iGT6I">
+          <property role="2Ry0Am" value="lib" />
+          <node concept="2Ry0Ak" id="1Y1nd8S4s_R" role="2Ry0An">
+            <property role="2Ry0Am" value="jbr-lnx" />
+            <node concept="2Ry0Ak" id="1Y1nd8S4s_W" role="2Ry0An">
+              <property role="2Ry0Am" value="jbrsdk" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="398rNT" id="1Y1nd8S4s_g" role="1l3spd">
+      <property role="TrG5h" value="jbr_win_home" />
+      <node concept="55IIr" id="1Y1nd8S4s_F" role="398pKh">
+        <node concept="2Ry0Ak" id="1Y1nd8S4s_K" role="iGT6I">
+          <property role="2Ry0Am" value="lib" />
+          <node concept="2Ry0Ak" id="1Y1nd8S4s_Y" role="2Ry0An">
+            <property role="2Ry0Am" value="jbr-win" />
+            <node concept="2Ry0Ak" id="1Y1nd8S4sA3" role="2Ry0An">
               <property role="2Ry0Am" value="jbrsdk" />
             </node>
           </node>

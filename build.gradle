@@ -4,6 +4,8 @@ import de.itemis.mps.gradle.RunAntScript
 
 ext.mpsMajor = "2020.2"
 ext.mpsMinor = "2"
+ext.jbrSdkVersion = '11_0_8'
+ext.jbrBuild = 'b1129.2'
 
 group 'ir.amv.snippets'
 version '1.0-SNAPSHOT'
@@ -50,15 +52,37 @@ dependencies {
     ant_lib "org.apache.ant:ant-junit:1.10.1"
 }
 
-task downloadJBRZip(type: Download) {
-    src "https://jetbrains.bintray.com/intellij-jbr/jbrsdk-11_0_6-osx-x64-b520.43.tar.gz"
-    dest file('lib/jbr.tar.gz')
+task downloadMacJBRZip(type: Download) {
+    src "https://jetbrains.bintray.com/intellij-jbr/jbrsdk-$jbrSdkVersion-osx-x64-${jbrBuild}.tar.gz"
+    dest file('lib/jbr.mac.tar.gz')
     overwrite false
 }
 
-task downloadJBR(type: Copy, dependsOn: downloadJBRZip) {
-    from tarTree('lib/jbr.tar.gz')
-    into file('lib/jbr')
+task downloadLnxJBRZip(type: Download) {
+    src "https://jetbrains.bintray.com/intellij-jbr/jbrsdk-${jbrSdkVersion}-linux-x64-${jbrBuild}.tar.gz"
+    dest file('lib/jbr.lnx.tar.gz')
+    overwrite false
+}
+
+task downloadWinJBRZip(type: Download) {
+    src "https://jetbrains.bintray.com/intellij-jbr/jbrsdk-${jbrSdkVersion}-windows-x64-${jbrBuild}.tar.gz"
+    dest file('lib/jbr.win.tar.gz')
+    overwrite false
+}
+
+task downloadMacJBR(type: Copy, dependsOn: downloadMacJBRZip) {
+    from tarTree('lib/jbr.mac.tar.gz')
+    into file('lib/jbr-mac')
+}
+
+task downloadLnxJBR(type: Copy, dependsOn: downloadLnxJBRZip) {
+    from tarTree('lib/jbr.lnx.tar.gz')
+    into file('lib/jbr-lnx')
+}
+
+task downloadWinJBR(type: Copy, dependsOn: downloadWinJBRZip) {
+    from tarTree('lib/jbr.win.tar.gz')
+    into file('lib/jbr-win')
 }
 
 task downloadDependencies(type: Copy) {
@@ -108,7 +132,7 @@ task buildRcp(type: RunAntScript, dependsOn: [$buildRcp, copyStartupScripts]) {
     targets 'clean', 'build'
 }
 
-task buildRcpWithJBR(type: RunAntScript, dependsOn: [$buildRcp, copyStartupScripts, downloadJBR]) {
+task buildRcpWithJBR(type: RunAntScript, dependsOn: [$buildRcp, copyStartupScripts, downloadMacJBR, downloadLnxJBR, downloadWinJBR]) {
     script 'build/build-rcpdistrib-jbr.xml'
     targets 'clean', 'build'
 }

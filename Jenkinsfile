@@ -17,5 +17,20 @@ pipeline {
         }
       } // steps
     } // stage
+    stage('Build IDE') {
+      agent { label 'master' }
+      steps {
+        withDockerContainer(
+            image: 'gradle:6.6-jdk11',
+            args: '--net="host"',
+            toolName: env.DOCKER_TOOL_NAME
+        ) {
+          script {
+            sh "gradle buildRcpWithJBR --no-daemon"
+            archiveArtifacts "build/**/*.zip, build/**/*.tar.gz"
+          } // script
+        }
+      } // steps
+    } // stage
   }
 }
