@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:f50312ea-7038-4d84-b070-0f64cd78c325(main@generator)">
+<model ref="r:e1aa9742-2b15-490e-aaab-fa81191a1d61(main@generator)">
   <persistence version="9" />
   <languages>
     <devkit ref="a2eb3a43-fcc2-4200-80dc-c60110c4862d(jetbrains.mps.devkit.templates)" />
@@ -17,7 +17,7 @@
       </concept>
     </language>
   </registry>
-  <node concept="bUwia" id="62CzOEt2GtU">
+  <node concept="bUwia" id="7RL5o4iEdEe">
     <property role="TrG5h" value="main" />
   </node>
 </model>
