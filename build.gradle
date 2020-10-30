@@ -146,3 +146,23 @@ task clean(type: Delete) {
         include '**/classes_gen/**'
     }
 }
+
+apply plugin: 'maven-publish'
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifact("build/artifacts/cats_Plugin/ir.amv.is.snippets.catslang.plugin.zip") {
+                extension 'zip'
+            }
+        }
+    }
+    repositories {
+        maven {
+            name 'nexus'
+            url "http://localhost:8081/repository/maven-snapshots/"
+            credentials {
+                username project.repoUser
+                password project.repoPassword
+            }}
+    }
+}
