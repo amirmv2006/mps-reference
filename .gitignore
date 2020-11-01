@@ -3,6 +3,7 @@
 .gradle
 !gradle-wrapper.jar
 .gradletasknamecache
+gradle.properties
 
 **/.mps/workspace.xml
 **/.mps/shelf
