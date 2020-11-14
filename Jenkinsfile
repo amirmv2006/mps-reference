@@ -11,10 +11,10 @@ pipeline {
                         toolName: env.DOCKER_TOOL_NAME
                 ) {
                     withCredentials([
-                            string(credentialsId: params.GitlabAccessToken, variable: 'ORG_GRADLE_PROJECT_repoPassword')
+                            string(credentialsId: 'jenkins-nexus-password', variable: 'ORG_GRADLE_PROJECT_repoPassword')
                     ]) {
                         withEnv([
-                                'ORG_GRADLE_PROJECT_repoUrl=https://nexus.example.com/nexus/content/groups/public/'
+                                'ORG_GRADLE_PROJECT_repoUrl=https://nexus.example.com/nexus/content/groups/public/',
                                 'ORG_GRADLE_PROJECT_repoUser=jenkins'
                         ]) {
                             script {
@@ -40,10 +40,10 @@ pipeline {
                             toolName: env.DOCKER_TOOL_NAME
                     ) {
                         withCredentials([
-                                string(credentialsId: params.GitlabAccessToken, variable: 'ORG_GRADLE_PROJECT_repoPassword')
+                                string(credentialsId: 'jenkins-nexus-password', variable: 'ORG_GRADLE_PROJECT_repoPassword')
                         ]) {
                             withEnv([
-                                    'ORG_GRADLE_PROJECT_repoUrl=https://nexus.example.com/nexus/content/groups/public/'
+                                    'ORG_GRADLE_PROJECT_repoUrl=https://nexus.example.com/nexus/content/groups/public/',
                                     'ORG_GRADLE_PROJECT_repoUser=jenkins'
                             ]) {
                                 script {
