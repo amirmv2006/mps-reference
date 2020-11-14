@@ -34,23 +34,17 @@ pipeline {
                         args: '--net="host"',
                         toolName: env.DOCKER_TOOL_NAME
                 ) {
-                    withDockerContainer(
-                            image: 'gradle:6.6-jdk11',
-                            args: '--net="host"',
-                            toolName: env.DOCKER_TOOL_NAME
-                    ) {
-                        withCredentials([
+                    withCredentials([
                                 string(credentialsId: 'jenkins-nexus-password', variable: 'ORG_GRADLE_PROJECT_repoPassword')
+                    ]) {
+                        withEnv([
+                                'ORG_GRADLE_PROJECT_repoUrl=https://nexus.example.com/nexus/content/groups/public/',
+                                'ORG_GRADLE_PROJECT_repoUser=jenkins'
                         ]) {
-                            withEnv([
-                                    'ORG_GRADLE_PROJECT_repoUrl=https://nexus.example.com/nexus/content/groups/public/',
-                                    'ORG_GRADLE_PROJECT_repoUser=jenkins'
-                            ]) {
-                                script {
-                                    sh "gradle buildRcpWithJBR --no-daemon"
-                                    archiveArtifacts "build/**/*.zip, build/**/*.tar.gz"
-                                } // script
-                            }
+                            script {
+                                sh "gradle buildRcpWithJBR --no-daemon"
+                                archiveArtifacts "build/**/*.zip, build/**/*.tar.gz"
+                            } // script
                         }
                     }
                 }
