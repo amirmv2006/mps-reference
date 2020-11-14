@@ -2,8 +2,8 @@ import de.itemis.mps.gradle.BuildLanguages
 import de.itemis.mps.gradle.RunAntScript
 
 
-ext.mpsMajor = "2020.2"
-ext.mpsMinor = "2"
+ext.mpsMajor = "2020.1"
+ext.mpsMinor = "6"
 ext.jbrSdkVersion = '11_0_8'
 ext.jbrBuild = 'b1129.2'
 
